@@ -1,5 +1,6 @@
 import { InfoOutlined, PlayArrow } from '@mui/icons-material';
 import "./featured.scss";
+import matrix from "./matrix.jpg"
 
 export default function Featured({ type }) {
   return (
@@ -26,7 +27,7 @@ export default function Featured({ type }) {
         </div>
       )}
       <img
-        src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+        src={matrix}
         alt=""
       />
       <div className="info">

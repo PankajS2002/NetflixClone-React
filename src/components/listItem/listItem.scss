@@ -43,6 +43,11 @@
         .icons {
           display: flex;
           margin-bottom: 10px;
+
+
+          .active-link {
+            color: red;
+          }
   
           .icon {
             border: 2px solid white;

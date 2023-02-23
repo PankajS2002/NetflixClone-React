@@ -4,10 +4,11 @@ import {
   Add,
   ThumbUpAltOutlined,
   ThumbDownOutlined,
-} from '@mui/icons-material';
+} from "@mui/icons-material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function ListItem({ index }) {
+export default function ListItem({ index, img, id }) {
   const [isHovered, setIsHovered] = useState(false);
   const trailer =
     "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761";
@@ -19,7 +20,7 @@ export default function ListItem({ index }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
-        src="https://occ-0-1723-92.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABU7D36jL6KiLG1xI8Xg_cZK-hYQj1L8yRxbQuB0rcLCnAk8AhEK5EM83QI71bRHUm0qOYxonD88gaThgDaPu7NuUfRg.jpg?r=4ee"
+        src={img}
         alt=""
       />
       {isHovered && (
@@ -27,7 +28,9 @@ export default function ListItem({ index }) {
           <video src={trailer} autoPlay={true} loop />
           <div className="itemInfo">
             <div className="icons">
+              <Link to='/watch' className="active-link">
               <PlayArrow className="icon" />
+              </Link>
               <Add className="icon" />
               <ThumbUpAltOutlined className="icon" />
               <ThumbDownOutlined className="icon" />
